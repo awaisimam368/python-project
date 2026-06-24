@@ -2,9 +2,10 @@ import streamlit as st
 import time
 from google import genai
 
-# ==================== CONFIGURATION ====================
-GEMINI_API_KEY = str(st.secrets["GEMINI_API_KEY"]).strip()
-# =======================================================
+# ======================= CONFIGURATION =======================
+os.environ["GEMINI_API_KEY"] = str(st.secrets["GEMINI_API_KEY"]).strip()
+client = genai.Client()
+# =============================================================
 
 def calculate_bill_pkr(total_units):
     slabs = [
