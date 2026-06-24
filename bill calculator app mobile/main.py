@@ -83,7 +83,7 @@ if submit_btn:
         for attempt in range(max_retries):
             status_placeholder.info(f"⏳ Connecting to Gemini AI (Attempt {attempt + 1}/{max_retries})...")
             try:
-                client = genai.Client(api_key=GEMINI_API_KEY)
+                client = genai.Client()
                 prompt = f"""
                 Analyze this Pakistani home setup: {', '.join(summary_items)}. 
                 Monthly units: {total_monthly_units:.2f}, Bill: Rs. {final_bill}. 
