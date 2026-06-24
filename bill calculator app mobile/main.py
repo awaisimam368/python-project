@@ -3,7 +3,7 @@ import time
 from google import genai
 
 # ==================== CONFIGURATION ====================
-GEMINI_API_KEY = st.secrets["AQ.Ab8RN6IgNSeq-PP5he6PF-djj9zvD0zFknXmzsdToKwkCrFbrQ"]
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 # =======================================================
 
 def calculate_bill_pkr(total_units):
