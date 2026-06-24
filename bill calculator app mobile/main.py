@@ -89,7 +89,7 @@ if submit_btn:
                 Monthly units: {total_monthly_units:.2f}, Bill: Rs. {final_bill}. 
                 Give 3 short, localized energy saving tips for a Pakistani household. No fluff.
                 """
-                response = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
+                response = client.models.generate_content(model="gemini-2.0-flash", contents=prompt)
                 
                 # Clear the loading text and print the response
                 status_placeholder.empty()
