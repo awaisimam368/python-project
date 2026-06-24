@@ -3,7 +3,7 @@ import time
 from google import genai
 
 # ==================== CONFIGURATION ====================
-GEMINI_API_KEY = 'AQ.Ab8RN6IgNSeq-PP5he6PF-djj9zvD0zFknXmzsdToKwkCrFbrQ'
+GEMINI_API_KEY = st.secrets["AQ.Ab8RN6IgNSeq-PP5he6PF-djj9zvD0zFknXmzsdToKwkCrFbrQ"]
 # =======================================================
 
 def calculate_bill_pkr(total_units):
@@ -89,7 +89,7 @@ if submit_btn:
                 Monthly units: {total_monthly_units:.2f}, Bill: Rs. {final_bill}. 
                 Give 3 short, localized energy saving tips for a Pakistani household. No fluff.
                 """
-                response = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+                response = client.models.generate_content(model="gemini-1.5-flash", contents=prompt)
                 
                 # Clear the loading text and print the response
                 status_placeholder.empty()
