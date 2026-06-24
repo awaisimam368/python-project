@@ -1,10 +1,11 @@
 import streamlit as st
-import time
 import os
 from google import genai
 
-# Configuration
+# 1. Put the key into the environment ONCE
 os.environ["GEMINI_API_KEY"] = str(st.secrets["GEMINI_API_KEY"]).strip()
+
+# 2. Initialize the client WITHOUT passing the key here
 client = genai.Client()
 def calculate_bill_pkr(total_units):
     slabs = [
